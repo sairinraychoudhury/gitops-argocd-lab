@@ -16,5 +16,12 @@ spec:
     namespace: guestbook
 
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
+  syncPolicy:
     syncOptions:
       - CreateNamespace=true
