@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: whoami-db-migration
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+spec:
+  template:
+    spec:
+      containers:
+        - name: migration
+          image: busybox
+          command: ["sh", "-c", "echo 'Running fake DB migration...'; sleep 15; echo 'Migration complete.'"]
+      restartPolicy: Never
+  backoffLimit: 1
