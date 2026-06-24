@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-web
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: git@github.com:sairinraychoudhury/gitops-argocd-lab.git
+    targetRevision: main
+    path: apps/hello-web
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: hello-web
+
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
