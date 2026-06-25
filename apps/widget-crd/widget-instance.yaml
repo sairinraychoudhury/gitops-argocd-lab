@@ -1,0 +1,6 @@
+apiVersion: lab.sairin.dev/v1
+kind: Widget
+metadata:
+  name: demo-widget
+spec:
+  ready: false
