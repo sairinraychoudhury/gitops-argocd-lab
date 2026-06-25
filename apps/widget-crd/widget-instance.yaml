@@ -3,4 +3,4 @@ kind: Widget
 metadata:
   name: demo-widget
 spec:
-  ready: false
+  ready: true
