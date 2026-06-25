@@ -10,13 +10,15 @@ spec:
         revision: main
         directories:
           - path: apps/*
+          - path: apps/widget-crd
+            exclude: true
 
   template:
     metadata:
       name: '{{path.basename}}'
       namespace: argocd
     spec:
-      project: default
+      project: app-team
 
       source:
         repoURL: git@github.com:sairinraychoudhury/gitops-argocd-lab.git

@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: app-team
+  namespace: argocd
+spec:
+  description: "Restricted project for application teams - no cluster-scoped resources"
+
+  sourceRepos:
+    - git@github.com:sairinraychoudhury/gitops-argocd-lab.git
+
+  destinations:
+    - server: https://kubernetes.default.svc
+      namespace: guestbook
+    - server: https://kubernetes.default.svc
+      namespace: hello-web
+    - server: https://kubernetes.default.svc
+      namespace: whoami
+
+  clusterResourceWhitelist: []   # explicitly empty — no cluster-scoped resources allowed
+
+  namespaceResourceBlacklist:
+    - group: ""
+      kind: ResourceQuota
+    - group: ""
+      kind: LimitRange
+
+  roles:
+    - name: app-team-deployer
+      description: "Can sync and view apps in this project"
+      policies:
+        - p, proj:app-team:app-team-deployer, applications, sync, app-team/*, allow
+        - p, proj:app-team:app-team-deployer, applications, get, app-team/*, allow
+      groups: []
