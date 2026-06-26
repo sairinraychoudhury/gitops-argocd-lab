@@ -209,6 +209,13 @@ After cleaning the history:
 
 ---
 
+# Kubernetes Workloads
+
+![K8SWorkloads-0](docs/images/K8SWorkloads-0)
+![K8SWorkloads-1](docs/images/K8SWorkloads-1)
+
+---
+
 # Repository Structure
 
 ```text
