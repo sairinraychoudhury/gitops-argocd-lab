@@ -1,0 +1,5 @@
+{
+  "data": {
+    "policy.csv": "g, sairinraychoudhury, role:admin\np, proj:app-team:app-team-deployer, applications, sync, app-team/*, allow\np, proj:app-team:app-team-deployer, applications, get, app-team/*, allow\n"
+  }
+}

@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   default:
-    protocol: HTTPS
+    timeoutSec: 3600
   targetRef:
     group: ""
     kind: Service

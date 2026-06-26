@@ -1,0 +1,6 @@
+{
+  "data": {
+    "url": "https://35.207.241.20",
+    "dex.config": "connectors:\n  - type: github\n    id: github\n    name: GitHub\n    config:\n      clientID: Ov23li4reaS9MIyHu1Jb\n      clientSecret: $dex.github.clientSecret\n"
+  }
+}

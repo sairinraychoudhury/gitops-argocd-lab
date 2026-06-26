@@ -1,3 +1,5 @@
 /argocd_deploy_key
 /argocd_deploy_key.pub
-/root-apps.yaml/
+/argocd-tls.key
+/argocd-tls.crt
+/dex-secret-patch.json
