@@ -212,7 +212,7 @@ After cleaning the history:
 # Kubernetes Workloads
 
 ![K8SWorkloads-0](docs/images/K8SWorkloads-0.png)
-![K8SWorkloads-1](docs/images/K8SWorkloads-1.png)
+![K8SWorkloads-1](docs/images/K8SWorloads-1.png)
 
 ---
 
