@@ -2,4 +2,3 @@
 /argocd_deploy_key.pub
 /argocd-tls.key
 /argocd-tls.crt
-/dex-secret-patch.json
